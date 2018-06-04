@@ -25,14 +25,10 @@ public class OpenAndSaveIJ2
 
 		// Beginning of the Exercise:
 		// 1. Use datasetIOService to open the image "path".
-		Dataset image = datasetIOService.open( path );
 		// 2. Use Invert.invert(...) to invert the image.
-		Img< RealType<?> > result = Invert.invert( image );
+		Img< RealType<?> > result = null;
 		// 3. Use uiService.show(...) to show the result of the inversion.
-		uiService.show( result );
 		// 4. Use datasetService.create(...) to create a Dataset from the inverted image.
-		Dataset dataset = datasetService.create( ( RandomAccessibleInterval) result );
 		// 5. Use datasetIOService to save the result of the inversion to your hard drive.
-		datasetIOService.save( dataset, "/home/arzt/test.tif" );
 	}
 }

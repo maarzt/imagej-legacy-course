@@ -14,7 +14,6 @@ public class RunCommandIJ1
 		// 1. Run the ImageNormalizerPlugin
 		//  - IJ.run() doesn't work from the IDE
 		//  - Create an instance of ImageNormalizerPlugin and run it directly
-		new ImageNormalizerPlugin().run(imp.getProcessor());
 
 		// Optional:
 		//  - Build the binaries with  $ mvn package
