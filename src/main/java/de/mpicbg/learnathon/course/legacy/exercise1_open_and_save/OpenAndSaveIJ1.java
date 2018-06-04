@@ -14,12 +14,16 @@ public class OpenAndSaveIJ1
 
 		// Beginning of the exercise:
 		// 1. Use IJ.open(...) to open the image as ImagePlus.
+		ImagePlus imp = IJ.openImage(path);
 		// 2. Use ImageJFunctions.wrapReal to convert the ImagePlus to Img.
-		Img<? extends RealType<?> > img = null;
+		Img<? extends RealType<?> > img = ImageJFunctions.wrapReal( imp );
 		// 3. Use Invert.invert(...) to invert the Img.
-		Img<? extends RealType<?> > result = null;
+		Img<? extends RealType<?> > result = Invert.invert( img );
 		// 4. Use ImageJFunctions.wrap(image, "title") to convert the Img to ImagePlus
+		ImagePlus resultImagePlus = ImageJFunctions.wrap( (Img) result, "title" );
 		// 5. Use imagePlus.show() to show the inverted image.
+		resultImagePlus.show();
 		// 6. Save the result with IJ.save(...).
+		IJ.save( resultImagePlus, "~/test.tif" );
 	}
 }
