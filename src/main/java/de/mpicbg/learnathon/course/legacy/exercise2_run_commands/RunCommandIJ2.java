@@ -24,7 +24,7 @@ public class RunCommandIJ2
 		// show gui
 		imagej.ui().showUI();
 
-		// The Exercise:
-		// 1. Use commandService.run() to run the ImageNormalizerIJ2Plugin
+		// Use commandService.run() to run the ImageNormalizerIJ2Plugin
+		commandService.run( ImageNormalizerIJ2Plugin.class, true, "input", image );
 	}
 }
