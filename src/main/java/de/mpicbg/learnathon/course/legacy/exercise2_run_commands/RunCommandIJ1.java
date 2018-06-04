@@ -19,6 +19,6 @@ public class RunCommandIJ1
 		// Optional:
 		//  - Build the binaries with  $ mvn package
 		//  - Copy the jar file to Fiji.app/plugins/
-		//  - Normalisation and Normalisation (IJ2) plugin using IJ.run
+		//  - Run Normalisation and Normalisation (IJ2) plugin using IJ.run
 	}
 }
